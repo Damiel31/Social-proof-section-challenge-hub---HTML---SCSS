@@ -1,0 +1,134 @@
+@import "globals";
+@import "variables";
+
+.review {
+    text-align: center;
+    padding: 0 3.25rem 0 3.25rem;
+    margin: 5.25rem 0 4.25rem 0;
+
+    &__text {
+        margin-bottom: 3.9375rem;
+
+        h1 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: $veryDarkMagenta;
+        }
+        p {
+            font-weight: 400;
+            color: $veryDarkMagenta;
+            line-height: 1.5;
+        }
+    }
+
+    &__ratings {
+        
+        & > * {
+            margin-bottom: 3rem;
+        }
+        .stars {
+            margin-bottom: 0.8125rem;
+        }
+        span {
+            font-weight: 700;
+            color: $veryDarkMagenta;
+        }
+
+        .ratingsScore {
+            background-color: hsl(303, 10%, 93%);
+            padding: 0.8125rem 0.812rem;
+            margin-bottom: 1.125rem;
+            border-radius: 0.3125rem;
+
+        }
+    }
+}
+
+.personReview {
+    padding: 0 2.25rem 0 2.25rem;
+
+    &__card {
+        background-color: $veryDarkMagenta;
+        color: #ffffff;
+        border-radius: .5rem;
+        padding: 1.4375rem 1.875rem 1.5rem 1.4375rem;
+        margin-bottom: 1rem;
+
+
+        .info {
+            display: flex;
+            align-items: center;
+             img {
+                 border-radius: 50%;
+                 height: 2.625rem;
+                 width: 2.625rem;
+                 margin-right: .8rem;
+             }
+             h2 {
+                 font-size: 1rem;
+                 margin-bottom: .8rem;
+             }
+
+             span {
+                 color: $softPink;
+                 font-weight: 2.625;
+             }
+        }
+    }
+}
+
+@media screen and (min-width: 1110px) {
+    .review {
+        display: flex;
+
+        &__text {
+            text-align: left;
+            width: 50%;
+
+            h1 {
+                font-size: 2.625rem;
+            }
+        }
+        
+        &__ratings {
+            width: 50%;
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;           
+            align-items: center;
+
+
+            & > * {
+                margin-bottom: 0rem;
+            }
+
+            .ratingsScore {
+                display: flex;
+                background-color: hsl(303, 10%, 93%);
+                padding: 1.125rem 1.25rem;
+                margin-bottom: 1.125rem;
+                border-radius: 0.3125rem;
+
+                &:nth-child(2) {
+                    margin-left: 6.25rem;
+                }
+                &:nth-child(3) {
+                    margin-left: 8.875rem;
+                }
+
+                .stars {
+                    margin: 0 2.0625rem 0 0;
+                }
+
+            }
+        }
+    }
+
+    .personReview {
+        display: flex;
+        padding: 0 3.25rem 0 3.25rem;
+        &__card {
+            margin: 0 1.875rem 0 0;
+        }
+    }
+}
